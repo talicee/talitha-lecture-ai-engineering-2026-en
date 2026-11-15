@@ -39,7 +39,7 @@ How to grade:
 
 - Judge only readability here. Correctness and suitability for the role are covered by Grounding, Scope, and Hint; do not include them in this criterion
 - The answer addresses the question directly and conveys what is needed concisely
-- Choose fail if there is excessive paraphrasing or repetition of the same content (for example, repeating the same explanation with "In other words"), or too much explanation unrelated to the question
+- Choose fail if the answer repeats the same information, includes unnecessary background details, or explains topics that are not needed to answer the user's question
 
 ## Unresolved Questions (Choose unsure for Answers Covered Here)
 
