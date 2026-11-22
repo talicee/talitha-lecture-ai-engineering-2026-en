@@ -8,9 +8,11 @@ from pathlib import Path
 
 # Default model. Set the AIE_MODEL environment variable to switch models.
 #   Example: export AIE_MODEL=gemini-3.5-flash
-DEFAULT_MODEL = "gemini-3.5-flash-lite"
+DEFAULT_MODEL = "gemini-3.5-flash-lite" #"gemini-2.5-flash" "gemini-3.8-flash" "gemini-3.5-flash-lite"
 MODEL = os.getenv("AIE_MODEL", DEFAULT_MODEL)
 
+DEFAULT_TEMPERATURE = 0.9
+TEMPERATURE = float(os.getenv("AIE_TEMPERATURE", DEFAULT_TEMPERATURE))
 
 # Lecture 05: search with one page per chunk. Build the index with scripts/build_rag_index.py.
 ROOT = Path(__file__).resolve().parent.parent
@@ -19,7 +21,7 @@ RAG_TREE = ROOT / "data/rag_data/tree.json"
 RAG_GRAPH = ROOT / "data/rag_data/graph.json"
 RAG_DB = Path(os.getenv("AIE_RAG_DB", str(ROOT / "data/rag_data/index.sqlite3")))
 RAG_DOCUMENT_IDS = ("lec01-main", "lec02-main", "lec03-main")
-RAG_TOP_K = 5
+RAG_TOP_K = 8
 GRAPH_START_K = 3
 GRAPH_HOPS = 2
 GRAPH_MAX_RESULTS = 10
